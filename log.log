@@ -1,0 +1,32 @@
+# depthchargectl --config /tmp/gru-depthcharge.ini --board gru -v build --compress lzma --output /tmp/gru-test.img
+Defaulting to current system root '/'.
+Using root 'UUID=d2ce05d9-a6e7-42c2-9643-ced7830d23fa' set in '/etc/fstab'.
+Using kernel cmdline from /proc/cmdline: quiet splash plymouth.ignore-serial-consoles plymouth.prefer-fbcon pmos_boot_uuid=b11185f9-0ad6-4e5c-b572-bb52fd099c8c pmos_root_uuid=d2ce05d9-a6e7-42c2-9643-ced7830d23fa pmos_rootfsopts=defaults
+Appending 'root=UUID=d2ce05d9-a6e7-42c2-9643-ced7830d23fa' to kernel cmdline.
+Assuming board 'Unnamed gru board' ('gru') by codename argument or config.
+Using root 'UUID=d2ce05d9-a6e7-42c2-9643-ced7830d23fa' set in cmdline.
+Searching '/boot/dtbs' for dtbs compatible with pattern 'google,gru(-rev\d+)?(-sku\d+)?'.
+Building depthcharge image for board 'Unnamed gru board' ('gru').
+Building for kernel version '(unknown)'.
+Trying with compression 'lzma'.
+Using file '/boot/vmlinuz' as a vmlinuz.
+Trying to decompress file '/boot/vmlinuz'.
+Decompressed input '/boot/vmlinuz' as '/tmp/depthchargectl-jwbjoi6l/mkdepthcharge-lzma/vmlinuz'.
+Using file '/boot/initramfs' as an initramfs.
+Using file '/boot/dtbs/rockchip/rk3399-gru-bob.dtb' as a device-tree blob.
+Using file '/boot/dtbs/rockchip/rk3399-gru-kevin.dtb' as a device-tree blob.
+Using file '/boot/dtbs/rockchip/rk3399-gru-scarlet-dumo.dtb' as a device-tree blob.
+Using file '/boot/dtbs/rockchip/rk3399-gru-scarlet-inx.dtb' as a device-tree blob.
+Using file '/boot/dtbs/rockchip/rk3399-gru-scarlet-kd.dtb' as a device-tree blob.
+Trying to decompress file '/boot/dtbs/rockchip/rk3399-gru-bob.dtb'.
+Trying to decompress file '/boot/dtbs/rockchip/rk3399-gru-kevin.dtb'.
+Trying to decompress file '/boot/dtbs/rockchip/rk3399-gru-scarlet-dumo.dtb'.
+Trying to decompress file '/boot/dtbs/rockchip/rk3399-gru-scarlet-inx.dtb'.
+Trying to decompress file '/boot/dtbs/rockchip/rk3399-gru-scarlet-kd.dtb'.
+The kernel buffer start address or a ramdisk load address is required to patch DTB files for initramfs support.
+Failed while creating depthcharge image.
+
+cat /tmp/gru-depthcharge.ini
+[boards/arm64/rk3399/gru]
+loads-fit-ramdisk = True
+
